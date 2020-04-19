@@ -16,7 +16,7 @@ function main() {
   login
   docker_build $INPUT_TAGS $ACCOUNT_URL
   create_ecr_repo $INPUT_CREATE_REPO
-  docker_push_to_ecr $INPUT_TAGS $ACCOUNT_URL".cn"
+  docker_push_to_ecr $INPUT_TAGS $ACCOUNT_URL
 }
 
 function sanitize() {
@@ -79,7 +79,7 @@ function docker_push_to_ecr() {
   local TAG=$1
   local DOCKER_TAGS=$(echo "$TAG" | tr "," "\n")
   for tag in $DOCKER_TAGS; do
-    docker push $2/$INPUT_REPO:$tag
+    docker push "$2.cn"/$INPUT_REPO:$tag
     echo ::set-output name=image::$2/$INPUT_REPO:$tag
   done
   echo "== FINISHED PUSH TO ECR"
