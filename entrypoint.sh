@@ -9,7 +9,7 @@ function main() {
   sanitize "${INPUT_REPO}" "repo"
   sanitize "${INPUT_ASSUME_ROLE}" "assume_role"
 
-  ACCOUNT_URL="$INPUT_ACCOUNT_ID.dkr.ecr.$INPUT_REGION.amazonaws.com"
+  ACCOUNT_URL="$INPUT_ACCOUNT_ID.dkr.ecr.$INPUT_REGION.amazonaws.com.cn"
 
   aws_configure
   assume_role
