@@ -1,9 +1,9 @@
-name: AWS ECR China
-author: Lee Sun-Hyoup <kciter@naver.com>
+name: Push to ECR China
+author: Alan Wang forked from Lee Sun-Hyoup <kciter@naver.com>
 branding:
   icon: upload-cloud
   color: orange
-description: Create Docker images and push into a ECR repository.
+description: Create Docker images and push into a ECR repository in China
 inputs:
   access_key_id:
     description: The AWS access key id
